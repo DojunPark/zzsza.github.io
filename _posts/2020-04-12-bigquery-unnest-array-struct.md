@@ -109,6 +109,15 @@ comments: true
 		- <img src="https://www.dropbox.com/s/j8k2cdf3arhyhpz/Screenshot%202020-04-12%2014.35.10.png?raw=1">
 		- 여기서 SELECT ["python", "go", "scala"] as programming_language로 가능한거 아니냐고 생각할 수 있는데, 데이터를 만드는 과정이라면 둘 다 가능하지만, Table에 저장된 데이터를 SELECT해서 집계할 땐 이렇게 해야함
 		- SELECT ARRAY[programming\_language] AS programming\_languages\_array 이런 쿼리를 직접 돌려보면 배열이 아닌 행에 하나의 값만 저장되는 것을 볼 수 있음. ARRAY_AGG을 사용!
+		- 만약 배열 안에 NULL이 하나라도 있는 경우, ARRAY\_AGG의 결과는 NULL이 나온다
+			- 이 경우 IGNORE NULLS을 추가하면 널을 제외하고 연산함
+
+		```
+		SELECT ARRAY_AGG(x IGNORE NULLS) FROM UNNEST([1, NULL, 2, 4, 6]) x
+		```
+		
+		- ARRAY\_AGG의 옵션 절에 궁금하면 [ARRAY_AGG](https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators?hl=ko#array_agg)를 참고하면 된다(DISTINCT, IGNORE NULLS, ORDER BY 등을 사용할 수 있음)
+		
 - 배열 내 접근
 	- 배열의 N번째 값을 가져오고 싶은 경우 OFFSET, ORDINAL을 사용할 수 있음
 	- OFFSET : 0부터 시작
