@@ -23,6 +23,7 @@ comments: true
 	- Google Datalab은 이제 사용하지 않고, AI Platform Notebooks을 더 권장하는듯
 - BigQuery나 Cloud Storage에 저장된 데이터를 활용해 전처리하고(BigQuery나 Dataflow 등 활용) 학습한 후, Serving
 	- 그 파이프라인도 자동화
+- GPU나 인스턴스의 성능을 클릭 몇번으로 수정할 수 있음(기존 Compute Engine이면 쉽지 않았던 일)	
 
 <img src="https://www.dropbox.com/s/gq1rjkizzx4orgs/Screenshot%202020-05-10%2013.59.27.png?raw=1">
 
