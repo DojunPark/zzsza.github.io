@@ -194,7 +194,7 @@ comments: true
 		- id : build step의 고유 식별자
 		- waitFor : 먼저 실행해야 하는 step 지정, id 입력
 		- entrypoint : 실행될 명령. Docker의 entrypoint와 유사함
-		- secrentEnv : Cloud KMS 암호화 키 사용해 암호화된 환경 변수. 자세한 설명은 [Using secrets and credentials](https://cloud.google.com/cloud-build/docs/securing-builds/use-encrypted-secrets-credentials#using_the_encrypted_variable_in_build_requests) 참고
+		- secretEnv : Cloud KMS 암호화 키 사용해 암호화된 환경 변수. 자세한 설명은 [Using secrets and credentials](https://cloud.google.com/cloud-build/docs/securing-builds/use-encrypted-secrets-credentials) 참고
 		- volumns : Docker 컨테이너 볼륨에 마운트
 		- logsBucket : 로그 저장할 스토리지 지정
 	- 더 자세한 내용은 [Build configuration overview](https://cloud.google.com/cloud-build/docs/build-config) 문서 참고

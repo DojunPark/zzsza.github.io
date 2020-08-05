@@ -173,7 +173,7 @@ comments: true
 - 외부 자바스크립트 파일을 활용할 경우
 	- temp UDF처럼 Google Storage에 저장하고 사용
 	- Uber의 H3 함수를 사용해보는 예시
-	- [Github](https://github.com/jatorre/bigquery-jslibs/blob/master/libs/h3/3.5.0/h3-js.umd.3.5.0.js)에서 자바스크립트 파일 다운로드
+	- [Github](https://github.com/jatorre/bigquery-jslibs/blob/master/libs/h3/)에서 자바스크립트 파일 다운로드
 		- Raw 클릭 후 다른 이름으로 저장
 	- Google Storage에 해당 파일 업로드
 		- 저는 geultto-udf라는 곳에 저장
